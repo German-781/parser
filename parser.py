@@ -103,20 +103,12 @@ def np_chunk(tree):
     A noun phrase chunk is defined as any subtree of the sentence
     whose label is "NP" that does not itself contain any other
     noun phrases as subtrees.
-
-    Devuelve una lista de todos los fragmentos de frases nominales en el árbol de oraciones.
-    Un fragmento de sintagma nominal se define como cualquier subárbol de la oración.
-    cuya etiqueta es "NP" que no contiene ningún otro
-    frases nominales como subárboles.
-
-
     """
 
     chunco = []
 
     for subtree in tree.subtrees(filter= filt):
         chunco.append(subtree)
-        print("subtree ", subtree)
 
     return chunco
 
